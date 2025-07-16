@@ -56,4 +56,10 @@ public class AmazoneExoPerso {
         Assertions.assertTrue(objSearchText.getUrlWebPage().contains("/s?") || objSearchText.getUrlWebPage().contains("k="));
 
     }
+    @AfterAll
+public static void tearDown() {
+    if (driver != null) {
+        driver.quit();
+    }
+}
 }
